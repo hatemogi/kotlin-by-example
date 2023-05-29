@@ -1,6 +1,6 @@
-# Conditional Expression
+# 조건문 Conditional Expression
 
-There is no ternary operator `condition ? then : else` in Kotlin. Instead, `if` may be used as an expression:
+코틀린에는 `조건 ? 참일때 : 거짓일때` 3항 연산자가 따로 없습니다. `if`문이 식의 형태로 그 역할을 대신합니다.
 
 ```kotlin
 fun main() {
@@ -12,4 +12,4 @@ fun main() {
 }
 ```
 
-1. `if` is an expression here: it returns a value.
+1. `if` 문이 식(expression)의 형태로 쓰여서 반환값을 주었습니다.

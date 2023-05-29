@@ -4,7 +4,7 @@ You can inline JavaScript code into your Kotlin code using the js("…") functio
 This should be used with extreme care.
 
 
-```run-kotlin-js
+```kotlin```-js
 fun main() {
 //sampleStart
     js("alert(\"alert from Kotlin!\")") // 1
@@ -14,7 +14,7 @@ fun main() {
 
 1. Sending a JavaScript alert from a Kotlin function. 
 
-```run-kotlin-js
+```kotlin```-js
 fun main(){
 //sampleStart
   val json = js("{}")               // 1

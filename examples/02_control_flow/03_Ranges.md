@@ -2,7 +2,7 @@
 
 There is a set of tools for defining ranges in Kotlin. Let's have a brief look at them.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     for(i in 0..3) {             // 1
@@ -36,7 +36,7 @@ fun main() {
 
 Char ranges are also supported: 
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     for (c in 'a'..'d') {        // 1
@@ -58,7 +58,7 @@ fun main() {
 
 Ranges are also useful in `if` statements:
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     val x = 2

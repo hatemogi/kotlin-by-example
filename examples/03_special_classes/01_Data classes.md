@@ -2,7 +2,7 @@
 
 [Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections. You can override these methods with your own implementations in the class declaration.
 
-```run-kotlin
+```kotlin```
 data class User(val name: String, val id: Int) {           // 1
     override fun equals(other: Any?) =
         other is User && other.id == this.id               // 2

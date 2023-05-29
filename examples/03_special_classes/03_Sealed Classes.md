@@ -2,7 +2,7 @@
 
 [Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, it can only be subclassed from inside the same package where the sealed class is declared. It cannot be subclassed outside of the package where the sealed class is declared. 
 
-```run-kotlin
+```kotlin```
 sealed class Mammal(val name: String)                                                   // 1
 
 class Cat(val catName: String) : Mammal(catName)                                        // 2

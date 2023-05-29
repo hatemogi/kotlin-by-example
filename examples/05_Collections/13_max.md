@@ -2,7 +2,7 @@
 
 `minOrNull` and `maxOrNull` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart

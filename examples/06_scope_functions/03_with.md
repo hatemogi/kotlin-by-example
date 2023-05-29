@@ -4,7 +4,7 @@
 
 `with` is a non-extension function that can access members of its argument concisely: you can omit the instance name when referring to its members. 
 
-```run-kotlin
+```kotlin```
 class Configuration(var host: String, var port: Int) 
 
 fun main() {

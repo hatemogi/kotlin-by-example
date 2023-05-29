@@ -4,7 +4,7 @@
 
 The size of the result collection equals to the minimum size of a source collection. 
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart

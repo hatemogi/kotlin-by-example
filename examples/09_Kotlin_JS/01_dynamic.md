@@ -4,7 +4,7 @@
 That is needed in order  to interoperate with untyped or loosely typed environments, such 
 as the JavaScript ecosystem.
 
-```run-kotlin-js
+```kotlin```-js
 fun main(){
 //sampleStart
   val a: dynamic = "abc"                                               // 1

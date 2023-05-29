@@ -4,7 +4,7 @@ The [class declaration](https://kotlinlang.org/docs/reference/classes.html#class
 the primary constructor etc.) and the class body, surrounded by curly braces. 
 Both the header and the body are optional; if the class has no body, curly braces can be omitted.
 
-```run-kotlin
+```kotlin```
 class Customer                                  // 1
 
 class Contact(val id: Int, var email: String)   // 2

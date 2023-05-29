@@ -2,7 +2,7 @@
 
 `flatMap` transforms each element of a collection into an iterable object and builds a single list of the transformation results. The transformation is user-defined. 
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart

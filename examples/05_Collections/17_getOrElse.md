@@ -3,7 +3,7 @@
 `getOrElse` provides safe access to elements of a collection. It takes an index and a function that provides the  default value 
 in cases when the index is out of bound.
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart
@@ -19,7 +19,7 @@ fun main() {
 
 `getOrElse` can also be applied to `Map` to get the value for the given key. 
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart

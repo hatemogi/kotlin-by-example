@@ -4,7 +4,7 @@ A [*higher-order function*](https://kotlinlang.org/docs/reference/lambdas.html) 
 
 ### Taking Functions as Parameters
 
-```run-kotlin
+```kotlin```
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
     return operation(x, y)                                          // 2
 }
@@ -26,7 +26,7 @@ fun main() {
 
 ### Returning Functions
 
-```run-kotlin
+```kotlin```
 fun operation(): (Int) -> Int {                                     // 1
     return ::square
 }

@@ -2,7 +2,7 @@
 
 *map* extension function enables you to apply a transformation to all elements in a collection. It takes a transformer function as a lambda-parameter.
 
-```run-kotlin
+```kotlin```
 fun main() {
 
 //sampleStart

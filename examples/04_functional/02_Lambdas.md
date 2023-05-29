@@ -2,7 +2,7 @@
 
 [*Lambda functions*](https://kotlinlang.org/docs/reference/lambdas.html) ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     // All examples create a function object that performs upper-casing.

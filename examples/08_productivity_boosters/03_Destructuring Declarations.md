@@ -2,7 +2,7 @@
 
 [Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) syntax can be very handy, especially when you need an instance only for accessing its members. It lets you define the instance without a specific name therefore saving a few lines of code.
 
-```run-kotlin
+```kotlin```
 fun findMinMax(list: List<Int>): Pair<Int, Int> { 
     // do the math
     return Pair(50, 100) 
@@ -27,7 +27,7 @@ fun main() {
 2. Maps can be destructured as well. `name` and `age` variables are mapped to the map key and value.
 3. Built-in `Pair` and `Triple` types support destructuring too, even as return values from functions.
 
-```run-kotlin
+```kotlin```
 data class User(val username: String, val email: String)    // 1
 
 fun getUser() = User("Mary", "mary@somewhere.com")
@@ -47,7 +47,7 @@ fun main() {
 3. Data class automatically defines the `component1()` and `component2()` methods that will be called during destructuring.
 4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable.
 
-```run-kotlin
+```kotlin```
 class Pair<K, V>(val first: K, val second: V) {  // 1
     operator fun component1(): K {              
         return first

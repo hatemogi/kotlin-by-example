@@ -2,7 +2,7 @@
 
 ### Default Parameter Values and Named Arguments
 
-```run-kotlin
+```kotlin```
 fun printMessage(message: String): Unit {                               // 1
     println(message)
 }
@@ -42,7 +42,7 @@ fun main() {
 
 Member functions and extensions with a single parameter can be turned into [infix functions](https://kotlinlang.org/docs/reference/functions.html#infix-notation).
 
-```run-kotlin
+```kotlin```
 fun main() {
 
   infix fun Int.times(str: String) = str.repeat(this)        // 1
@@ -79,7 +79,7 @@ Note that the example uses [local functions](https://kotlinlang.org/docs/referen
 
 Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
   operator fun Int.times(str: String) = str.repeat(this)       // 1
@@ -101,7 +101,7 @@ fun main() {
 
 [Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow you to pass any number of arguments by separating them with commas.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     fun printAll(vararg messages: String) {                            // 1

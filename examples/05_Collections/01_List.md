@@ -2,7 +2,7 @@
 
 A [list](https://kotlinlang.org/docs/reference/collections.html) is an ordered collection of items. In Kotlin, lists can be either mutable (`MutableList`) or read-only (`List`). For list creation, use the standard library functions `listOf()` for read-only lists and `mutableListOf()` for mutable lists. To prevent unwanted modifications, obtain read-only views of mutable lists by casting them to `List`.
 
-```run-kotlin
+```kotlin```
 val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)        // 1
 val sudoers: List<Int> = systemUsers                              // 2
 

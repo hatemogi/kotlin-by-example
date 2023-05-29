@@ -3,7 +3,7 @@
 `apply` executes a block of code on an object and returns the object itself. Inside the block, the object is referenced by `this`.
 This function is handy for initializing objects.  
 
-```run-kotlin
+```kotlin```
 data class Person(var name: String, var age: Int, var about: String) {
     constructor() : this("", 0, "")
 }

@@ -3,7 +3,7 @@
 Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allows delegating the calls of the property `set` and `get` methods to a certain object.
 The delegate object in this case should have the method `getValue`. For mutable properties, you'll also need `setValue`.
 
-```run-kotlin
+```kotlin```
 import kotlin.reflect.KProperty
 
 class Example {
@@ -37,7 +37,7 @@ fun main() {
 The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and others. You may use them as is.
 For example `lazy`is used for lazy initialization.
 
-```run-kotlin
+```kotlin```
 class LazySample {
     init {
       println("created!")            // 1
@@ -67,7 +67,7 @@ fun main() {
 Property delegation can be used for storing properties in a map. This is handy for tasks like parsing JSON
 or doing other "dynamic" stuff.
 
-```run-kotlin
+```kotlin```
 class User(val map: Map<String, Any?>) {
     val name: String by map                // 1
     val age: Int     by map                // 1

@@ -2,7 +2,7 @@
 
 Kotlin fully supports the traditional object-oriented inheritance mechanism. 
 
-```run-kotlin
+```kotlin```
 open class Dog {                // 1
     open fun sayHello() {       // 2
         println("wow wow!")
@@ -28,7 +28,7 @@ fun main() {
 
 ### Inheritance with Parameterized Constructor
 
-```run-kotlin
+```kotlin```
 //sampleStart
 open class Tiger(val origin: String) {
     fun sayHello() {
@@ -51,7 +51,7 @@ fun main() {
 
 ### Passing Constructor Arguments to Superclass
 
-```run-kotlin
+```kotlin```
 //sampleStart
 open class Lion(val name: String, val origin: String) {
     fun sayHello() {

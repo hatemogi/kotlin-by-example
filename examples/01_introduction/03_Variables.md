@@ -4,7 +4,7 @@ Kotlin has powerful type inference. While you can explicitly declare the type of
 compiler do the work by inferring it. Kotlin does not enforce immutability, though it is recommended.
 In essence use *val* over *var*.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     var a: String = "initial"  // 1
@@ -19,7 +19,7 @@ fun main() {
 2. Declares an immutable variable and initializes it.
 3. Declares an immutable variable and initializes it without specifying the type. The compiler infers the type `Int`.
 
-```run-kotlin
+```kotlin```
 fun main() {
 //sampleStart
     var e: Int  // 1
@@ -34,7 +34,7 @@ fun main() {
 
 You're free to choose when you initialize a variable, however, it must be initialized before the first read.
 
-```run-kotlin
+```kotlin```
 fun someCondition() = true 
 
 fun main() {

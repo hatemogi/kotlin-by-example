@@ -2,7 +2,7 @@
 
 Classes and objects in Kotlin work the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
 
-```run-kotlin
+```kotlin```
 import java.util.Random
 
 class LuckDispatcher {                    //1 
@@ -40,7 +40,7 @@ Here is a basic typical usage of an `object` **expression**: a simple object/pro
 There is no need to do so in class declaration: you create a single object, declare its members and access it within one function. 
 Objects like this are often created in Java as anonymous class instances.
 
-```run-kotlin
+```kotlin```
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
 
     val dayRates = object {                                                     //2
@@ -70,7 +70,7 @@ fun main() {
 
 You can also use the `object` **declaration**. It isn't an expression, and can't be used in a variable assignment. You should use it to directly access its members:
 
-```run-kotlin
+```kotlin```
 object DoAuth {                                                 //1 
     fun takeParams(username: String, password: String) {        //2 
         println("input Auth parameters = $username:$password")
@@ -93,7 +93,7 @@ An object declaration inside a class defines another useful case: the **companio
 Syntactically it's similar to the static methods in Java: you call object members using its *class name* as a qualifier.
 If you plan to use a companion object in Kotlin, consider using a *package-level* function instead.  
 
-```run-kotlin
+```kotlin```
 class BigBen {                                  //1 
     companion object Bonger {                   //2
         fun getBongs(nTimes: Int) {             //3

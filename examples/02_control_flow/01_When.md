@@ -1,8 +1,8 @@
 # When
 
-Instead of the widely used `switch` statement, Kotlin provides the more flexible and clear `when` construction. It can be used either as a statement or as an expression.
+코틀린에서는, 흔히 쓰이는 `switch` 구문 대신에, 더 유연하고 명확한 `when` 문법을 씁니다. 명령문(statement) 방식이나, 표현식(expression) 형태로 쓸 수 있습니다.
 
-## When Statement
+## When 명령문
 
 ```kotlin
 fun main() {
@@ -13,29 +13,29 @@ fun main() {
     cases("hello")
 }
 
-fun cases(obj: Any) {                                
-    when (obj) {                                     // 1   
+fun cases(obj: Any) {
+    when (obj) {                                     // 1
         1 -> println("One")                          // 2
         "Hello" -> println("Greeting")               // 3
         is Long -> println("Long")                   // 4
         !is String -> println("Not a string")        // 5
         else -> println("Unknown")                   // 6
-    }   
+    }
 }
 
 class MyClass
 ```
 
-1. This is a `when` statement. 
-2. Checks whether `obj` equals to `1`.
-3. Checks whether `obj` equals to `"Hello"`.
-4. Performs type checking.
-5. Performs inverse type checking.
-6. Default statement (might be omitted).
+1. 이건 `when` 명령문(statement)입니다.
+2. `obj`가 `1`이랑 같은지 확인합니다.
+3. `obj`가 `"Hello"`와 같은지 확인합니다.
+4. 타입 검사를 합니다.
+5. 특정 타입이 아닌지 검사합니다.
+6. 기본(디폴트) 명령문인데 생략할 수도 있습니다.
 
-Note that all branch conditions are checked sequentially until one of them is satisfied. So, only the first suitable branch will be executed.   
+특정 조건이 만족될 때까지 차례로 모든 조건을 검사하게 됩니다. 즉, 처음으로 만족된 조건에 따른 명령만 수행하게 됩니다.
 
-## When Expression
+## When 표현식
 
 ```kotlin
 fun main() {
@@ -59,8 +59,8 @@ class MyClass
 ```
 
 
-1. This is a `when` expression. 
-2. Sets the value to `"one"` if `obj` equals to `1`.
-3. Sets the value to one if `obj` equals to `"Hello"`.
-4. Sets the value to `false` if `obj` is an instance of `Long`.
-5. Sets the value `42` if none of the previous conditions are satisfied. Unlike in `when` _statement_, the default branch is usually required in `when` _expression_, except the case when the compiler can check that other branches cover all possible cases.
+1. 이것이 `when` 식입니다.
+2. `obj` 값이 `1`과 같다면 `"one"`라고 지정합니다.
+3. `obj` 값이 `"Hello"`와 같다면 `1`로 지정합니다.
+4. `obj`가 `Long`타입의 값이라면 `false`로 지정합니다.
+5. 위의 모든 조건들이 모두 어긋났다면 `42`로 지정합니다. `when` 명령문에서와는 달리, `when` 식에서는 보통 기본 조건 (else)식이 필요합니다. `when` 식에서는 가능한 모든 경우를 다 처리해야만 하기 때문입니다.

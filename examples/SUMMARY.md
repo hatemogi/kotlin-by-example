@@ -1,17 +1,17 @@
 # Kotlin by Examples
 
-# introduction
-  - [Hello world](01_introduction/01_Hello%20world.md)
-  - [Functions](01_introduction/02_Functions.md)
-  - [Variables](01_introduction/03_Variables.md)
-  - [Null Safety](01_introduction/04_Null%20Safety.md)
-  - [Classes](01_introduction/05_Classes.md)
-  - [Generics](01_introduction/06_Generics.md)
-  - [Inheritance](01_introduction/07_Inheritance.md)
-# control_flow
-  - [When](02_control_flow/01_When.md)
-  - [Loops](02_control_flow/02_Loops.md)
-  - [Ranges](02_control_flow/03_Ranges.md)
+# 시작 Introduction
+  - [헬로 월드](01_introduction/01_Hello%20world.md)
+  - [함수](01_introduction/02_Functions.md)
+  - [변수](01_introduction/03_Variables.md)
+  - [Null 안전성](01_introduction/04_Null%20Safety.md)
+  - [클래스](01_introduction/05_Classes.md)
+  - [제너릭](01_introduction/06_Generics.md)
+  - [상속](01_introduction/07_Inheritance.md)
+# 제어문 Control Flow
+  - [조건문 When](02_control_flow/01_When.md)
+  - [반복문 Loop](02_control_flow/02_Loops.md)
+  - [범위 Ranges](02_control_flow/03_Ranges.md)
   - [Equality Checks](02_control_flow/04_Equality%20Checks.md)
   - [Conditional expression](02_control_flow/05_Conditional%20expression.md)
 # special_classes

@@ -1,6 +1,6 @@
-# Ranges
+# 범위 Ranges
 
-There is a set of tools for defining ranges in Kotlin. Let's have a brief look at them.
+코틀린에는 다양한 방식으로 범위를 정의할 수 있습니다.
 
 ```kotlin
 fun main() {
@@ -29,12 +29,12 @@ fun main() {
 }
 ```
 
-1. Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
-2. Iterates over a range starting from 0 up to 3 (exclusive). Like for loop in Python or like 'for(i=0; i<3; ++i)' in other programming languages (C/C++/Java).
-3. Iterates over a range with a custom increment step for consecutive elements.
-4. Iterates over a range in _reverse_ order.
+1. 0부터 3(마지막 포함)까지 범위를 차례로 처리했습니다. C/C++/Java 같은 언어에서 `for(i=0; i<=3; ++i)`로 쓰는 것과 비슷합니다.
+2. 0부터 3(마지막 제외)까지 범위를 순회했습니다. 파이썬의 반복문이나 C/C++/Java 같은 언어들에서의 `for(i=0; i<3; ++i)` 구문과 비슷합니다.
+3. 연속적인 요소에서 몇 단계씩 증가할 지 지정했습니다.
+4. 특정 범위를 거꾸로 순회했습니다.
 
-Char ranges are also supported: 
+문자(Char) 범위도 지원합니다.
 
 ```kotlin
 fun main() {
@@ -54,9 +54,11 @@ fun main() {
 ```
 
 1. Iterates over a char range in alphabetical order.
+1. 문자 범위를 알파벳 순서대로 순회했습니다.
 2. Char ranges support `step` and `downTo` as well.
+2. 문자 범위에도 `step`이나 `downTo`를 쓸 수 있습니다.
 
-Ranges are also useful in `if` statements:
+`if`문 안에서도 범위를 유용하게 쓸 수 있습니다.
 
 ```kotlin
 fun main() {
@@ -74,5 +76,5 @@ fun main() {
 }
 ```
 
-1. Checks if a value is in the range.
 2. `!in` is the opposite of `in`.
+2. `!in`는 `in`의 반대입니다. .

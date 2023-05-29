@@ -2,7 +2,7 @@
 
 `count` functions returns either the total number of elements in a collection or the number of elements matching the given predicate.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart

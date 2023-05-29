@@ -10,7 +10,7 @@ The difference between `associateBy` and `groupBy` is how they process objects w
 
 The returned map preserves the entry iteration order of the original collection.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart

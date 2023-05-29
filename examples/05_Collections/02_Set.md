@@ -2,7 +2,7 @@
 
 A [set](https://kotlinlang.org/docs/reference/collections.html) is an unordered collection that does not support duplicates. For creating sets, there are functions `setOf()` and `mutableSetOf()`. A read-only view of a mutable set can be obtained by casting it to `Set`.  
 
-```kotlin```
+```kotlin
 val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3") // 1
 
 fun addIssue(uniqueDesc: String): Boolean {                                                       

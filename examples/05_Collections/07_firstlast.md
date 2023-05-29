@@ -6,7 +6,7 @@ These functions return the first and the last element of the collection correspo
 
 If a collection is empty or doesn't contain elements matching the predicate, the functions throw `NoSuchElementException`.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart
@@ -34,7 +34,7 @@ fun main() {
 
 These functions work almost the same way with one difference: they return `null` if there are no matching elements.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart

@@ -2,7 +2,7 @@
 
 [Enum classes](https://kotlinlang.org/docs/reference/enum-classes.html) are used to model types that represent a finite set of distinct values, such as directions, states, modes, and so forth.
 
-```kotlin```
+```kotlin
 enum class State {
     IDLE, RUNNING, FINISHED                           // 1
 }
@@ -25,7 +25,7 @@ fun main() {
 
 Enums may contain properties and methods like other classes, separated from the list of enum constants by a semicolon.
 
-```kotlin```
+```kotlin
 
 enum class Color(val rgb: Int) {                      // 1
     RED(0xFF0000),                                    // 2

@@ -5,7 +5,7 @@ The `partition` function splits the original collection into a pair of lists usi
  1. Elements for which the predicate is `true`.
  1. Elements for which the predicate is `false`.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart

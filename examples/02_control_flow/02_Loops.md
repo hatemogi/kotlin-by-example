@@ -6,7 +6,7 @@ Kotlin supports all the commonly used loops: `for`, `while`, `do-while`
 
 `for` in Kotlin works the same way as in most languages.
 
-```kotlin```
+```kotlin
 fun main(args: Array<String>) {
 //sampleStart
     val cakes = listOf("carrot", "cheese", "chocolate")
@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
 
 `while` and `do-while` constructs work similarly to most languages as well.
 
-```kotlin```
+```kotlin
 fun eatACake() = println("Eat a Cake")
 fun bakeACake() = println("Bake a Cake")
 
@@ -53,7 +53,7 @@ fun main(args: Array<String>) {
 
 You can define your own iterators in your classes by implementing the `iterator` operator in them.
 
-```kotlin```
+```kotlin
 class Animal(val name: String)
 
 class Zoo(val animals: List<Animal>) {

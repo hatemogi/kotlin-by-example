@@ -6,7 +6,7 @@ These functions check the existence of collection elements that match a given pr
 
 Function `any` returns `true` if the collection contains **at least one** element that matches the given predicate.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart
@@ -32,7 +32,7 @@ fun main() {
 
 Function `all` returns `true` if **all** elements in collection match the given predicate.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart
@@ -58,7 +58,7 @@ fun main() {
 
 Function `none` returns `true` if there are **no** elements that match the given predicate in the collection.
 
-```kotlin```
+```kotlin
 fun main() {
 
 //sampleStart

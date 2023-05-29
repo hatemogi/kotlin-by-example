@@ -4,7 +4,7 @@
 Inside the block, the object is referenced by `it`, so it's easier to pass it as an argument.
 This function is handy for embedding additional actions, such as logging in call chains. 
 
-```kotlin```
+```kotlin
 data class Person(var name: String, var age: Int, var about: String) {
              constructor() : this("", 0, "")
 }

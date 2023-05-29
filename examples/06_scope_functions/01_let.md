@@ -3,7 +3,7 @@
 The Kotlin standard library function `let` can be used for scoping and null-checks. When called on an object, `let` executes the given block of code and returns the result of its last expression.
 The object is accessible inside the block by the reference `it` (by default) or a custom name. 
 
-```kotlin```
+```kotlin
 fun customPrint(s: String) {
     print(s.uppercase())
 }

@@ -2,7 +2,7 @@
 
 Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look a lot like normal functions and properties but with one important difference: you need to specify the type that you extend.
 
-```kotlin```
+```kotlin
 data class Item(val name: String, val price: Float)                                         // 1  
 
 data class Order(val items: Collection<Item>)  
@@ -32,7 +32,7 @@ fun main() {
 
 It is even possible to execute extensions on `null` references. In an extension function, you can check the object for `null` and use the result in your code:
 
-```kotlin```
+```kotlin
 //sampleStart
 fun <T> T?.nullSafeToString() = this?.toString() ?: "NULL"  // 1
 //sampleEnd

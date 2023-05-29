@@ -4,7 +4,7 @@ Instead of the widely used `switch` statement, Kotlin provides the more flexible
 
 ## When Statement
 
-```kotlin```
+```kotlin
 fun main() {
     cases("Hello")
     cases(1)
@@ -37,7 +37,7 @@ Note that all branch conditions are checked sequentially until one of them is sa
 
 ## When Expression
 
-```kotlin```
+```kotlin
 fun main() {
     println(whenAssign("Hello"))
     println(whenAssign(3.4))

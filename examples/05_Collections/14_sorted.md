@@ -4,7 +4,7 @@
 
 `sortedBy` sorts elements according to natural sort order of the values returned by specified selector function.
 
-```kotlin```
+```kotlin
 import kotlin.math.abs
 
 fun main() {

@@ -2,7 +2,7 @@
 
 *external* keyword allows to declare existing JavaScript API in a type-safe way.
 
-```kotlin```-js
+```kotlin-js
 external fun alert(msg: String)   // 1
 
 fun main() {

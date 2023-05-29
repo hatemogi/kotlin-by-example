@@ -1,6 +1,6 @@
-# Functions
+# 함수 Functions
 
-### Default Parameter Values and Named Arguments
+### 기본 파라미터 값과 이름 지정 파라미터 Default Parameter Values and Named Arguments
 
 ```kotlin
 fun printMessage(message: String): Unit {                               // 1
@@ -18,7 +18,7 @@ fun sum(x: Int, y: Int): Int {                                          // 3
 fun multiply(x: Int, y: Int) = x * y                                    // 4
 
 fun main() {
-    printMessage("Hello")                                               // 5                    
+    printMessage("Hello")                                               // 5
     printMessageWithPrefix("Hello", "Log")                              // 6
     printMessageWithPrefix("Hello")                                     // 7
     printMessageWithPrefix(prefix = "Log", message = "Hello")           // 8
@@ -27,20 +27,20 @@ fun main() {
 }
 ```
 
-1. A simple function that takes a parameter of type `String` and returns `Unit` (i.e., no return value).
-2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
-3. A function that returns an integer.
-4. A single-expression function that returns an integer (inferred).
-5. Calls the first function with the argument `Hello`.
-6. Calls the function with two parameters, passing values for both of them.
-7. Calls the same function omitting the second one. The default value `Info` is used. 
-8. Calls the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
-9. Prints the result of the `sum` function call.
-10. Prints the result of the `multiply` function call.
+1. 이 함수는 `String` 타입의 파라미터를 하나 받아서 `Unit`을 반환했습니다. `Unit`은 반환할 값이 없다는 의미입니다.
+2. 이 함수는 두번째 [기본값이 있는 파라미터](https://kotlinlang.org/docs/reference/functions.html#default-arguments)로 `Info`를 받습니다. 함수 반환 타입을 생략했는데, 이러면 `Unit`을 반환한다는 의미입니다.
+3. 이 함수는 정수를 반환합니다.
+4. 이 한줄짜리 함수도 정수를 반환합니다. 반환 타입은 명시하지 않았지만, **타입추론**기능으로 정수 타입이 됩니다.
+5. 첫번째 함수를 `Hello`라는 파라미터를 주고 호출했습니다.
+6. 두번째 함수를 두 파라미터 모두 지정해서 호출했습니다.
+7. 두번째 함수를 두번째 파라미터를 생략해서 호출하면, 기본값 `Info`가 전달됩니다.
+8. 같은 함수를 [이름지정 파라미터](https://kotlinlang.org/docs/reference/functions.html#named-arguments) 기능을 써서 호출했고, 심지어 파라미터 순서를 바꿨습니다.
+9. `sum` 함수 결괏값을 프린트 합니다.
+10. `multiply` 함수 결괏값을 프린트 합니다.
 
-### Infix Functions
+### 중위 함수 Infix Functions
 
-Member functions and extensions with a single parameter can be turned into [infix functions](https://kotlinlang.org/docs/reference/functions.html#infix-notation).
+파라미터를 하나만 받는 멤버 함수나 확장(extension) 함수는 [중위 함수](https://kotlinlang.org/docs/reference/functions.html#infix-notation)로 만들 수 있습니다.
 
 ```kotlin
 fun main() {
@@ -66,18 +66,18 @@ class Person(val name: String) {
 }
 ```
 
-1. Defines an infix extension function on `Int`.
-2. Calls the infix function.
-3. Creates a `Pair` by calling the infix function `to` from the standard library.
-4. Here's your own implementation of `to` creatively called `onto`.
-5. Infix notation also works on members functions (methods).
-6. The containing class becomes the first parameter.
+1. `Int`에 중위 확장 함수를 정의했습니다.
+2. 중위 함수를 호출했습니다.
+3. 표준 라이브러리에 있는 중위 함수 `to`를 호출해서 `Pair`를 만들었습니다.
+4. 이렇게 `to`랑 같은 일을 하는 `onto`를 직접 구현할 수도 있습니다.
+5. 중위 표현법은 멤버 함수나 메서드에도 쓸 수 있습니다.
+6. 선언된 클래스가 첫번째 파라미터가 됩니다.
 
-Note that the example uses [local functions](https://kotlinlang.org/docs/reference/functions.html#local-functions) (functions nested within another function).
+이 예제에서 [지역 함수](https://kotlinlang.org/docs/reference/functions.html#local-functions)(어떤 함수 안에 있는 함수)를 사용한 점도 살펴봐주세요.
 
-### Operator Functions
+### 연산자 함수 Operator Functions
 
-Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
+특정 함수들은 [연산자](https://kotlinlang.org/docs/reference/operator-overloading.html)로 "업그레이드"될 수 있고, 해당 연산자로 호출할 수 있습니다.
 
 ```kotlin
 fun main() {
@@ -92,14 +92,14 @@ fun main() {
 }
 ```
 
-1. This takes the infix function from above one step further using the `operator` modifier.
-2. The operator symbol for `times()` is `*` so that you can call the function using `2 * "Bye"`.
-3. An operator function allows easy range access on strings.
-4. The `get()` operator enables [bracket-access syntax](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed).
+1. `times`라는 확장 중위 함수에 `operator` 제어자(modifier)를 붙였습니다.
+2. `times()`에 대응하는 연산자 기호는 `*`이기 때문에, `2 * "Bye"`처럼 해당 함수를 호출할 수 있게 됩니다.
+3. 이 연산자 함수로 문자열의 특정범위에 쉽게 접근할 수 있습니다.
+4. `get()` 연산자로 [인덱스 접근 문법](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed)을 제공할 수 있습니다.
 
-### Functions with `vararg` Parameters
+### `vararg` 파라미터 Functions with `vararg` Parameters
 
-[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow you to pass any number of arguments by separating them with commas.
+[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs)를 쓰면 쉼표로 연달아 쓴 임의 갯수의 전달할 수 있습니다.
 
 ```kotlin
 fun main() {
@@ -108,7 +108,7 @@ fun main() {
         for (m in messages) println(m)
     }
     printAll("Hello", "Hallo", "Salut", "Hola", "你好")                 // 2
-    
+
     fun printAllWithPrefix(vararg messages: String, prefix: String) {  // 3
         for (m in messages) println(prefix + m)
     }
@@ -125,8 +125,8 @@ fun main() {
 }
 ```
 
-1. The `vararg` modifier turns a parameter into a vararg.
-2. This allows calling `printAll` with any number of string arguments.
-3. Thanks to named parameters, you can even add another parameter of the same type after the vararg. This wouldn't be allowed in Java because there's no way to pass a value.
-4. Using named parameters, you can set a value to `prefix` separately from the vararg.
-5. At runtime, a vararg is just an array. To pass it along into a vararg parameter, use the special spread operator `*` that lets you pass in `*entries` (a vararg of `String`) instead of `entries` (an `Array<String>`).
+1. `vararg` 제어자를 붙이면 파라미터를 vararg로 바꿀 수 있습니다.
+2. 이렇게 하면 `printAll`에 임의 갯수의 문자열 파라미터를 전달할 수 있습니다.
+3. 이름지정(named) 파라미터로, vararg에 이어서 같은 타입의 또다른 파라미터를 추가로 전달할 수도 있어요. 자바에서는 불가능합니다.
+4. 이름지정(named) 파라미터를 써서, `prefix` 값을 vararg와 별도로 전달했습니다.
+5. 실행시점에 vararg는 평범한 배열입니다. 배열을 vararg 파라미터로 전달하려면, `*` 연산자를 써서 `*entries`(`String` vararg)처럼 전달할 수 있습니다. `*` 연산자 없이 `entries`로 쓰면 `Array<String>`으로 인식됩니다.

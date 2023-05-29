@@ -12,7 +12,7 @@
   - [조건문 When](02_control_flow/01_When.md)
   - [반복문 Loop](02_control_flow/02_Loops.md)
   - [범위 Ranges](02_control_flow/03_Ranges.md)
-  - [Equality Checks](02_control_flow/04_Equality%20Checks.md)
+  - [같은지 비교 Equality Checks](02_control_flow/04_Equality%20Checks.md)
   - [Conditional expression](02_control_flow/05_Conditional%20expression.md)
 # special_classes
   - [Data classes](03_special_classes/01_Data%20classes.md)

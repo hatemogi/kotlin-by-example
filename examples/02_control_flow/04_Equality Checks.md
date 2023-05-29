@@ -1,8 +1,8 @@
-# Equality Checks
+# 같은지 비교 Equality Checks
 
-Kotlin uses `==` for structural comparison and `===` for referential comparison.
+코틀린에서는 구조적으로 비교할 때 `==`를 쓰고, 참조값을 비교할 때 `===`를 씁니다.
 
-More precisely, `a == b` compiles down to `if (a == null) b == null else a.equals(b)`.
+정확하게는, `a == b`가 `if (a == null) b == null else a.equals(b)`로 컴파일되는 방식입니다.
 
 ```kotlin
 fun main() {
@@ -17,5 +17,5 @@ fun main() {
 }
 ```
 
-1. Returns `true` because it calls `authors.equals(writers)` and sets ignore element order.
-2. Returns `false` because `authors` and `writers` are distinct references.
+1. `authors.equals(writers)`를 호출하게 되고, 이는 요소의 순서를 무시하기 때문에, 결과적으로 `true`를 반환합니다.
+2. `authors`와 `writers`는 다른 인스턴스(참조값)이기 때문에 `false`를 반환합니다.

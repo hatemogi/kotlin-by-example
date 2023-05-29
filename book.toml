@@ -1,0 +1,19 @@
+[book]
+authors = ["Daehyun Kim"]
+language = "ko"
+multilingual = false
+src = "examples"
+title = "Kotlin by Example"
+description = "JetBrains의 Kotlin By Example 편역"
+
+[output.html]
+additional-css = ["custom.css"]
+mathjax-support = true
+
+# git-repository-url = "https://github.com/rust-lang/mdBook"
+# git-repository-icon = "fa-github"
+# edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
+# site-url = "https://scalabook.hatemogi.com/"
+
+[output.html.search]
+enable = false

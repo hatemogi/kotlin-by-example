@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=JetBrains+Mono&family=Noto+Serif+KR&display=swap');
+
+h1.menu-title {
+  font-size: 2rem;
+}
+
+.header {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+:root {
+  --mono-font: 'JetBrains Mono', 'Noto Serif KR';
+  font-family: 'Gowun Dodum', serif;
+}
+
+:not(pre)>code.hljs {
+  border-radius: 3px;
+  background-color: var(--quote-bg);
+}
+
+pre code.hljs {
+  border-radius: 5px;
+}

@@ -1,16 +1,16 @@
-# Loops
+# 반복문 Loops
 
-Kotlin supports all the commonly used loops: `for`, `while`, `do-while`
+코틀린에는 흔히 쓰이는 반복문 구문인, `for`, `while`, `do-while` 모두를 지원합니다.
 
 ### `for`
 
-`for` in Kotlin works the same way as in most languages.
+코틀린에서의 `for` 구문은 대부분의 언어에서 쓰는 방식과 비슷하게 씁니다.
 
 ```kotlin
 fun main(args: Array<String>) {
 //sampleStart
     val cakes = listOf("carrot", "cheese", "chocolate")
-    
+
     for (cake in cakes) {                               // 1
         println("Yummy, it's a $cake cake!")
     }
@@ -19,11 +19,11 @@ fun main(args: Array<String>) {
 }
 ```
 
-1. Loops through each cake in the list.
+1. 리스트에 있는 모든 케잌에 대해 반복합니다.
 
-### `while` and `do-while`
+### `while`과 `do-while`
 
-`while` and `do-while` constructs work similarly to most languages as well.
+`while`과 `do-while`도 대부분의 언어와 비슷하게 동작합니다.
 
 ```kotlin
 fun eatACake() = println("Eat a Cake")
@@ -32,12 +32,12 @@ fun bakeACake() = println("Bake a Cake")
 fun main(args: Array<String>) {
     var cakesEaten = 0
     var cakesBaked = 0
-    
+
     while (cakesEaten < 5) {                    // 1
         eatACake()
         cakesEaten ++
     }
-    
+
     do {                                        // 2
         bakeACake()
         cakesBaked++
@@ -46,12 +46,12 @@ fun main(args: Array<String>) {
 }
 ```
 
-1. Executes the block while the condition is true.
-2. Executes the block first and then checking the condition.
+1. 조건이 참인 동안 해당 블록을 반복 수행합니다.
+2. 일단 해당 블록을 수행한 다음, 조건을 확인합니다.
 
-### Iterators
+### 이터레이터 Iterators
 
-You can define your own iterators in your classes by implementing the `iterator` operator in them.
+클래스를 만들 때 `iterator` 연산자를 구현하면, 나만의 이터레이터를 정의할 수 있습니다.
 
 ```kotlin
 class Animal(val name: String)
@@ -74,10 +74,10 @@ fun main() {
 }
 ```
 
-1. Defines an iterator in a class. It must be named `iterator` and have the `operator` modifier.
-2. Returns the iterator that meets the following method requirements:
+1. 클래스 안에 이터레이터를 정의했습니다. 반드시 `iterator`라는 이름으로 해야하고 `operator` 제어자를 붙여야 합니다.
+2. 아래 요구 사항을 만족하는 이터레이터를 반환해야 합니다.
   * `next()`: `Animal`
   * `hasNext()`: `Boolean`
-3. Loops through animals in the zoo with the user-defined iterator.
+3. 내가 만든 이터레이터를 써서 동물원에 있는 동물들에 대해 반복했습니다.
 
-The iterator can be declared in the type or as an extension function.
+이터레이터는 타입 안에 직접 선언하거나, 확장 함수의 형태로 타입 밖에서 따로 선언할 수도 있습니다.

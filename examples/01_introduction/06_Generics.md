@@ -1,10 +1,10 @@
-# Generics
+# 제너릭 Generics
 
-[Generics](https://kotlinlang.org/docs/reference/generics.html) are a genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
+[제너릭](https://kotlinlang.org/docs/reference/generics.html)은 현대의 프로그래밍 언어들에서 표준처럼 자리잡은 일반화 방법입니다. 제너릭 클래스와 함수는 공통 코드에서 어떤 특정 타입에서 독립적인 공통 코드를 잘 감싸서 쓸 수 있게 해서 코드 재사용성을 높여줍니다. `List<T>`에 있는 코드들이 타입 `T`에 관계 없이 잘 작동하는 것처럼요.
 
-### Generic Classes
+### 제너릭 클래스 Generic Classes
 
-The first way to use generics in Kotlin is creating generic classes.
+코틀린에서 제너릭을 쓰는 방법 중 첫번째는, 제너릭 클래스를 만드는 것입니다.
 
 ```kotlin
 //sampleStart
@@ -43,17 +43,15 @@ fun main() {
 ```
 
 
-1. Defines a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
-2. Inside the generic class, `E` can be used as a parameter like any other type.
-3. You can also use `E` as a return type.
+1. `MutableStack<E>`라는 제너릭 클래스를 정의했고, 여기서 `E`를 제너릭 타입 파라미터라고 부릅니다. 이를 사용할 때는 `MutableStack<Int>`처럼 `E` 자리에 `Int`처럼 구체적인 타입을 선언해서 씁니다.
+2. 제너릭 클래스 안에서는, `E`는 다른 보통의 타입들과 마찬가지로 쓸 수 있습니다.
+3. `E`를 반환 타입 자리에 쓸 수도 있습니다.
 
-Note that the implementation makes heavy use of Kotlin's shorthand syntax for functions that can be defined in a single expression.
+여기서 함수를 한줄로 줄여서 정의할 수 있는 축약 문법을 많이 쓴 점에 유의해주세요.
 
+### 제너릭 함수 Generic Functions
 
-### Generic Functions
-
-You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of a specific type. For instance, you can write a utility function to create mutable stacks:
-
+어떤 함수의 내용이 특정 타입에 독립적이라면, [제너릭 함수](https://kotlinlang.org/docs/reference/generics.html#generic-functions)로 정의해도 됩니다. 예제로, 스택을 만드는 유틸리티 함수를 작성해 보겠습니다.
 
 ```kotlin
 class MutableStack<E>(vararg items: E) {              // 1
@@ -83,4 +81,4 @@ fun main() {
 //sampleEnd
 ```
 
-Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Double>(...)`.
+여기서, 컴파일러가 `mutableStackOf` 함수의 제너릭 파라미터를 추론할 수 있기 때문에, `mutableStackOf<Double>(...)`처럼 길게 쓰지 않은 점을 자세히 봐주세요.

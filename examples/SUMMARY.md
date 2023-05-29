@@ -14,8 +14,8 @@
   - [범위 Ranges](02_control_flow/03_Ranges.md)
   - [같은지 비교 Equality Checks](02_control_flow/04_Equality%20Checks.md)
   - [조건문 Conditional expression](02_control_flow/05_Conditional%20expression.md)
-# special_classes
-  - [Data classes](03_special_classes/01_Data%20classes.md)
+# 특별한 클래스들
+  - [데이터 클래스](03_special_classes/01_Data%20classes.md)
   - [Enum](03_special_classes/02_Enum.md)
   - [Sealed Classes](03_special_classes/03_Sealed%20Classes.md)
   - [Object](03_special_classes/04_Object.md)

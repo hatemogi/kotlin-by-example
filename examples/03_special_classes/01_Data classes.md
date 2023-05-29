@@ -1,6 +1,6 @@
 # Data Classes
 
-[Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections. You can override these methods with your own implementations in the class declaration.
+[데이터 클래스](https://kotlinlang.org/docs/reference/data-classes.html)는 값을 보관하는 클래스를 쉽게 만드는 데 씁니다. 데이터 클래스로 만들면 클래스를 복제하거나 문자열 표현을 하거나 컬렉션의 값으로 쓸 때 필요한 메서드들을 자동으로 만들어 줍니다. 물론, 이 메서드들을 따로 재정의할 수도 있습니다.
 
 ```kotlin
 data class User(val name: String, val id: Int) {           // 1
@@ -33,13 +33,13 @@ fun main() {
 }
 ```
 
-1. Defines a data class with the `data` modifier.
-2. Override the default `equals` method by declaring users equal if they have the same `id`.
-3. Method `toString` is auto-generated, which makes `println` output look nice.
-4. Our custom `equals` considers two instances equal if their `id`s are equal.
-5. Data class instances with exactly matching attributes have the same `hashCode`.
-6. Auto-generated `copy` function makes it easy to create a new instance.
-7. `copy` creates a new instance, so the object and its copy have distinct references.
-8. When copying, you can change values of certain properties. `copy` accepts arguments in the same order as the class constructor.
-9. Use `copy` with named arguments to change the value despite of the properties order.
-10. Auto-generated `componentN` functions let you get the values of properties in the order of declaration.
+1. `data` 제어자를 붙여서 데이터 클래스를 정의했습니다.
+2. `id`값만 같다면 전체 값이 같다고 판단하는 것으로, `equals` 메서드를 재정의했습니다.
+3. `toString` 메서드는 자동으로 생성되며, `println`으로 확인해보면 보기 좋습니다.
+4. 두 인스턴스의 `id`만 같다면 `equals` 메서드는 참을 반환합니다.
+5. 데이터 클래스의 속성들이 같다면 `hashCode` 값도 똑같게 나옵니다.
+6. 자동 생성된 `copy` 함수로 새 인스턴스를 쉽게 만들어 낼 수 있습니다.
+7. `copy`는 새로운 인스턴스를 만들기 때문에, 원래의 인스턴스와 새 인스턴스는 다른 참조값을 같습니다.
+8. 데이터 클래스를 복제할 때 특정 속성을 바꿀 수 있습니다. `copy`는 클래스 생성자와 같은 순서로 파라미터를 받습니다.
+9. `copy`에 이름지정(named) 파라미터를 전달해서 순서 상관없이 특정 속성 값을 바꿀 수 있습니다.
+10. 자동 생성되는 `componentN` 함수를 써서, 데이터 클래스를 정의할 때의 속성들을 순서대로 접근할 수 있습니다.

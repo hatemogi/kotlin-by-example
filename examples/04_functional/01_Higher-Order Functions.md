@@ -1,8 +1,8 @@
 # Higher-Order Functions
 
-A [*higher-order function*](https://kotlinlang.org/docs/reference/lambdas.html) is a function that takes another function as parameter and/or returns a function.
+[고차 함수](https://kotlinlang.org/docs/reference/lambdas.html)는 다른 함수를 파라미터로 받거나, 반환값으로 함수를 돌려주는 함수를 말합니다.
 
-### Taking Functions as Parameters
+### 함수를 파라미터로 받기 Taking Functions as Parameters
 
 ```kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
@@ -18,13 +18,13 @@ fun main() {
 }
 ```
 
-1. Declares a higher-order function. It takes two integer parameters, `x` and `y`. Additionally, it takes another function `operation` as a parameter. The `operation` parameters and return type are also defined in the declaration.
-2. The higher order function returns the result of `operation` invocation with the supplied arguments.
-3. Declares a function that matches the `operation`signature.
-4. Invokes the higher-order function passing in two integer values and the function argument `::sum`. `::` is the notation that references a function by name in Kotlin.
-5. Invokes the higher-order function passing in a lambda as a function argument. Looks clearer, doesn't it?
+1. 고차 함수를 선언했습니다. 정수 파라미터로 `x`와 `y` 두 개와 `operation`이라는 함수를 파라미터로 받았습니다. `operation` 함수의 파라미터와 반환 타입도 선언부에 정의했습니다.
+2. 고차 함수의 결괏값은 `operation` 함수를, 주어진 `x`, `y`를 전달해 호출한 결괏값을 그대로 반환했습니다.
+3. `operation` 함수 타입과 일치하는 함수를 하나 선언했습니다.
+4. 정수값 두 개와 함수 파라미터 `::sum`을 전달해 호출했습니다. `::`는 어떤 함수를 이름으로 지칭하는 표기법입니다.
+5. 람다 함수 문법을 써서 해당 고차 함수에 전달해 호출했습니다. 훨씬 깔끔하죠?
 
-### Returning Functions
+### 함수를 반환하는 함수 Returning Functions
 
 ```kotlin
 fun operation(): (Int) -> Int {                                     // 1
@@ -39,7 +39,7 @@ fun main() {
 }
 ```
 
-1. Declares a higher-order function that returns a function. `(Int) -> Int` represents the parameters and return type of the `square` function.
-2. Declares a function matching the signature.
-3. Invokes `operation` to get the result assigned to a variable. Here `func` becomes `square` which is returned by `operation`.
-4. Invokes `func`. The `square` function is actually executed.
+1. 함수를 반환하는 고차 함수를 선언했습니다. `(Int) -> Int`는 `square` 함수의 파라미터 타입과 반환 타입을 나타냅니다.
+2. 해당 타입과 일치하는 함수를 선언했습니다.
+3. `operation` 함수를 호출한 결괏값을 변수에 대입했습니다. 여기서 `func`는 `operation` 함수에서 반환한 `square` 함수를 가리키게 됩니다.
+4. `func` 함수를 호출했습니다. 결과적으로 `square` 함수가 실행됩니다.

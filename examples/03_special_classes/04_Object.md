@@ -1,44 +1,38 @@
-# Object Keyword
+# 오브젝트 키워드 Object Keyword
 
-Classes and objects in Kotlin work the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
+코틀린에서 클래스와 오브젝트는 대부분의 객체 지향 언어에서와 같은 방식으로 작동합니다. **클래스**는 청사진 역할을 하고 **오브젝트**는 어떤 클래스의 인스턴스입니다. 보통은 클래스를 하나 정의하고, 그 클래스의 여러 인스턴스를 만들어 쓰곤 합니다.
 
 ```kotlin
 import java.util.Random
 
-class LuckDispatcher {                    //1 
-    fun getNumber() {                     //2 
+class LuckDispatcher {                    // 1
+    fun getNumber() {                     // 2
         var objRandom = Random()
         println(objRandom.nextInt(90))
     }
 }
 
 fun main() {
-    val d1 = LuckDispatcher()             //3
+    val d1 = LuckDispatcher()             // 3
     val d2 = LuckDispatcher()
-    
-    d1.getNumber()                        //4 
+
+    d1.getNumber()                        // 4
     d2.getNumber()
 }
 ```
 
-1. Defines a blueprint.
-2. Defines a method.
-3. Creates instances.
-4. Calls the method on instances. 
+1. 클래스(청사진)를 정의했습니다.
+2. 메서드를 정의했습니다.
+3. 인스턴스를 만들었습니다.
+4. 그 인스턴스의 메서드를 호출했습니다.
 
-In Kotlin you also have the [**object** keyword](https://kotlinlang.org/docs/reference/object-declarations.html). It is used to obtain a *data type with a single implementation*.
+코틀린에는 [**object** 키워드](https://kotlinlang.org/docs/reference/object-declarations.html)를 써서 단일 인스턴스를 만들 수 있습니다. 자바 개발을 해보신 분은 "단일"의 뜻이 싱글톤(singleton) 패턴 인스턴스를 의미한다고 보시면 됩니다. 여러 스레드에서 사용하려고 하더라도 오로지 하나의 인스턴스만 생성되게 할 수 있습니다.
 
-If you are a Java user and want to understand what "*single*" means, you can think of the **Singleton** pattern:
-it ensures you that only one instance of that class is created even if 2 threads try to create it.
+코틀린에서는 단일(싱글톤) 인스턴스를 만들기 위해서 `object`를 정의하면 됩니다. 클래스도 아니고, 생성자도 따로 없고, 딱 지연(lazy) 인스턴스만 생성됩니다. 지연(lazy) 인스턴스인 이유는, 해당 오브젝트가 처음 접근될 때 생성되기 때문이고, 접근되지 않는다면 아예 생성되지도 않습니다.
 
-To achieve this in Kotlin, you only need to declare an `object`: no class, no constructor, only a lazy instance.
-Why lazy? Because it will be created once when the object is accessed. Otherwise, it won't even be created.
+### `object` 식 Expression
 
-### `object` Expression
-
-Here is a basic typical usage of an `object` **expression**: a simple object/properties structure.
-There is no need to do so in class declaration: you create a single object, declare its members and access it within one function. 
-Objects like this are often created in Java as anonymous class instances.
+아래에 `object` 식을 활용해서 속성들을 담고 있는 오브젝트를 쉽게 만들었습니다. 이렇게 간단히 할 때는 클래스를 선언할 필요 없이 오브젝트를 하나 만들어서 그 안에 멤버들을 선언해두고 접근해서 쓸 수 있습니다.
 
 ```kotlin
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
@@ -60,41 +54,39 @@ fun main() {
 }
 ```
 
-1. Creates a function with parameters.
-2. Creates an object to use when calculating the result value.
-3. Accesses the object's properties.
-4. Prints the result.
-5. Calls the function. This is when the object is actually created.
+1. 파라미터들을 받는 함수를 만들었습니다.
+2. 결괏값을 계산하려고 오브젝트를 하나 만들었습니다.
+3. 오브젝트의 속성들을 읽었습니다
+4. 결과를 출력합니다.
+5. 함수를 호출했습니다. 이때 해당 오브젝트가 생성됩니다.
 
-### `object` Declaration
+### `object` 선언
 
-You can also use the `object` **declaration**. It isn't an expression, and can't be used in a variable assignment. You should use it to directly access its members:
+`object` 선언을 할 수도 있습니다. 식의 형태가 아니라면, 변수에 값을 대입하는 용도로 쓸 수 없습니다. 별도의 인스턴스를 만들지 않고, 해당 오브젝트의 멤버에 곧바로 접근할 수 있습니다.
 
 ```kotlin
-object DoAuth {                                                 //1 
-    fun takeParams(username: String, password: String) {        //2 
+object DoAuth {                                                 // 1
+    fun takeParams(username: String, password: String) {        // 2
         println("input Auth parameters = $username:$password")
     }
 }
 
 fun main(){
-    DoAuth.takeParams("foo", "qwerty")                          //3
+    DoAuth.takeParams("foo", "qwerty")                          // 3
 }
 
 ```
 
-1. Creates an object declaration.
-2. Defines the object method.
-3. Calls the method. This is when the object is actually created.
+1. 오브젝트를 선언했습니다.
+2. 오브젝트 메서드를 정의했습니다.
+3. 메서드를 호출했습니다. 보통은 메서드 호출 시점에 오브젝트가 생성되곤 합니다.
 
-### Companion Objects
+### 동반 오브젝트 Companion Objects
 
-An object declaration inside a class defines another useful case: the **companion object**. 
-Syntactically it's similar to the static methods in Java: you call object members using its *class name* as a qualifier.
-If you plan to use a companion object in Kotlin, consider using a *package-level* function instead.  
+클래스 정의 안쪽에 선언하는 **동반 객체**를 만들 수 있습니다. 문법적으로 자바의 정적(static) 메서드와 비슷합니다. 클래스 이름을 통해서 해당 오브젝트 멤버에 접근할 수 있습니다. 하지면 코틀린에서 동반 오브젝트를 쓸만한 상황이라면, 패키지에 곧바로 함수를 선언해 쓰는 방법을 고려해 주세요.
 
 ```kotlin
-class BigBen {                                  //1 
+class BigBen {                                  //1
     companion object Bonger {                   //2
         fun getBongs(nTimes: Int) {             //3
             for (i in 1 .. nTimes) {
@@ -109,7 +101,7 @@ fun main() {
 }
 ```
 
-1. Defines a class.
-2. Defines a companion. Its name can be omitted.
-3. Defines a companion object method.
-4. Calls the companion object method via the class name.
+1. 클래스를 정의합니다.
+2. 동반 오브젝트를 선언합니다. 이름은 생략할 수도 있습니다.
+3. 동반 오브젝트에 함수를 정의했습니다.
+4. 클래스 이름을 통해서 동반 오브젝트에 있는 메서드를 호출했습니다.

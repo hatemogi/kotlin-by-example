@@ -1,8 +1,8 @@
-# sorted
+# 정렬 sorted
 
-`sorted` returns a list of collection elements sorted according to their natural sort order (ascending).
+컬렉션의 `sorted` 메서드는 전체 요소를 오름차순으로 정렬한 리스트를 반환합니다.
 
-`sortedBy` sorts elements according to natural sort order of the values returned by specified selector function.
+`sortedBy` 메서드는 각 요소들에 대해 어떤 기준으로 정렬할 지 정하는 함수를 받아서 오름차순으로 정렬한 리스트를 반환합니다.
 
 ```kotlin
 import kotlin.math.abs
@@ -25,8 +25,8 @@ fun main() {
 }
 ```
 
-1. Defines a collection of shuffled numbers.
-2. Sorts it in the natural order.
-3. Sorts it in the inverted natural order by using `-it` as a selector function.
-4. Sorts it in the inverted natural order by using `sortedDescending`.
-5. Sorts it in the inverted natural order of items' absolute values by using `abs(it)` as a selector function.
+1. 마구 섞인 숫자들을 담은 컬렉션을 준비했습니다.
+2. 숫자들을 차례로 정렬했습니다.
+3. `-it`를 기준 함수로 전달해서, 전체 숫자들을 역순으로 정렬했습니다.
+4. `sortedDescending` 메서드를 써서 내림차순으로 정렬했습니다.
+5. `abs(it)`를 기준 함수로 쓰고, 역순으로 정렬했습니다.

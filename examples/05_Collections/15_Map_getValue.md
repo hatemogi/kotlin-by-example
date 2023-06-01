@@ -1,16 +1,14 @@
-# Map Element Access
+# 맵 조회 Map Element Access
 
-When applied to a map, `[]` operator returns the value corresponding to the given key, or `null` if there is no such key in the map.  
-
-`getValue` function returns an existing value corresponding to the given key or throws an exception if the key wasn't found. 
-For maps created with `withDefault`, `getValue` returns the default value instead of throwing an exception.
+맵에 `[]` 연산자를 쓰면 해당 키에 대응되는 값이 반환됩니다. 만약 해당 키가 맵에 없다면 `null`이 반환됩니다.
+`getValue` 함수는 주어진 키에 대응하는 값을 반환하거나, 대응 값이 없다면 예외를 발생시킵니다. `withDefault`로 만든 맵의 경우에는, `getValue`로 없는 키를 조회해도 예외를 발생시키지 않고 기본값을 반환해 줍니다.
 
 ```kotlin
 fun main(args: Array<String>) {
 
 //sampleStart
     val map = mapOf("key" to 42)
-    
+
     val value1 = map["key"]                                     // 1
     val value2 = map["key2"]                                    // 2
 
@@ -18,7 +16,7 @@ fun main(args: Array<String>) {
 
     val mapWithDefault = map.withDefault { k -> k.length }
     val value4 = mapWithDefault.getValue("key2")                // 3
-    
+
     try {
         map.getValue("anotherKey")                              // 4
     } catch (e: NoSuchElementException) {
@@ -34,7 +32,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-1. Returns 42 because it's the value corresponding to the key `"key"`.
-2. Returns `null` because `"key2"` is not in the map.
-3. Returns the default value because `"key2"` is absent. For this key it's 4.
-4. Throws `NoSuchElementException` because `"anotherKey"` is not in the map.
+1. 키 `"key"`에 해당하는 값인 42가 반환됩니다.
+2. 키 `"key2"`는 이 맵에 없기 때문에 `null`을 반환합니다.
+3. 키 `"key2"`가 이 맵에 없지만, 디폴트 값이 4가 반환됩니다.
+4. 키 `"anotherKey"`가 이 맵에 없기 때문에, `NoSuchElementException` 예외가 발생합니다.

@@ -1,11 +1,11 @@
-# Destructuring Declarations
+# 구조분해 Destructuring Declarations
 
-[Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) syntax can be very handy, especially when you need an instance only for accessing its members. It lets you define the instance without a specific name therefore saving a few lines of code.
+[구조분해](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) 문법을 사용하면, 인스턴스의 멤버들에 접근할 때 매우 편리합니다. 인스턴스 이름을 아예 지정하지 않고도 쓸 수 있어서 몇 줄의 코드가 절약되기도 합니다.
 
 ```kotlin
-fun findMinMax(list: List<Int>): Pair<Int, Int> { 
+fun findMinMax(list: List<Int>): Pair<Int, Int> {
     // do the math
-    return Pair(50, 100) 
+    return Pair(50, 100)
 }
 
 fun main() {
@@ -14,7 +14,7 @@ fun main() {
 
     val map = mapOf("Alice" to 21, "Bob" to 25)
     for ((name, age) in map) {                                      // 2
-        println("$name is $age years old")          
+        println("$name is $age years old")
     }
 
     val (min, max) = findMinMax(listOf(100, 90, 50, 98, 76, 83))    // 3
@@ -23,9 +23,9 @@ fun main() {
 }
 ```
 
-1. Destructures an `Array`. The number of variables on the left side matches the number of arguments on the right side.
-2. Maps can be destructured as well. `name` and `age` variables are mapped to the map key and value.
-3. Built-in `Pair` and `Triple` types support destructuring too, even as return values from functions.
+1. `Array`를 구조분해 했습니다. 왼쪽의 변수 갯수가, 우측의 값 갯수와 일치합니다.
+2. 맵도 구조분해할 수 있습니다. `name`과 `age` 변수가 맵의 각 키-값 쌍에 대응됩니다.
+3. 기본 자료 구조인 `Pair`와 `Triple` 타입에 대해서도 구조분해 문법을 쓸 수 있습니다.
 
 ```kotlin
 data class User(val username: String, val email: String)    // 1
@@ -38,22 +38,22 @@ fun main() {
     println(username == user.component1())                  // 3
 
     val (_, emailAddress) = getUser()                       // 4
-    
+
 }
 ```
 
-1. Defines a data class.
-2. Destructures an instance. Declared values are mapped to the instance fields.
-3. Data class automatically defines the `component1()` and `component2()` methods that will be called during destructuring.
-4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable.
+1. 데이터 클래스를 선언했습니다.
+2. 데이터 클래스 인스턴스를 구조분해 했습니다. 인스턴스 필드의 값들을 가져왔습니다.
+3. 데이터 클래스는 `component1()`나 `component1()` 같은 구조분해에 필요한 메서드들 자동으로 만들어줍니다.
+4. 구조분해후 사용하지 않는 값은, 밑줄(`_`)로 표시해서 컴파일러에게 사용하지 않는다고 알려줄 수 있습니다.
 
 ```kotlin
 class Pair<K, V>(val first: K, val second: V) {  // 1
-    operator fun component1(): K {              
+    operator fun component1(): K {
         return first
     }
 
-    operator fun component2(): V {              
+    operator fun component2(): V {
         return second
     }
 }
@@ -65,5 +65,5 @@ fun main() {
 }
 ```
 
-1. Defines a custom `Pair` class with `component1()` and `component2()` methods.
-2. Destructures an instance of this class the same way as for built-in `Pair`.
+1. `Pair` 클래스를 `component1()`와 `component2()` 메서드를 써서 직접 정의해봤습니다.
+2. 기본으로 있는 `Pair`와 똑같은 방식으로 구조분해할 수 있습니다.

@@ -1,7 +1,6 @@
-# apply
+# Apply 블록
 
-`apply` executes a block of code on an object and returns the object itself. Inside the block, the object is referenced by `this`.
-This function is handy for initializing objects.  
+객체에 대해 호출하는 `apply` 블록은 주어진 코드블록을 수행한 다음, 전체 반환값으로 객체 자체를 돌려줍니다. 코드블록 안에서는 객체에 접근할 때 `this`로 참조할 수 있습니다. 객체를 초기화 할 때 편리하게 쓸 수 있습니다.
 
 ```kotlin
 data class Person(var name: String, var age: Int, var about: String) {
@@ -22,7 +21,7 @@ fun main() {
 ```
 
 
-1. Creates a `Person()` instance with default property values.
-2. Applies the code block (next 3 lines) to the instance.   
-3. Inside `apply`, it's equivalent to `jake.name = "Jake"`.
-4. The return value is the instance itself, so you can chain other operations.
+1. `Person()` 인스턴스를 기본 속성값으로 만들었습니다.
+2. 만든 인스턴스에 대해 코드블록을 실행합니다.
+3. `apply`안에서는, `jake.name = "Jake"`로 쓴 것과 동일합니다.
+4. 전체 반환값은 인스턴스 자체가 됩니다. 그래서, 곧바로 이어서 다른 메서드를 호출할 수도 있습니다.

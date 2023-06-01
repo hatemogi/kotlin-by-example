@@ -1,6 +1,7 @@
 # Kotlin by Examples
 
 # 시작 Introduction
+  - [예제로 격파하는 Kotlin](README.md)
   - [헬로 월드](01_introduction/01_Hello%20world.md)
   - [함수](01_introduction/02_Functions.md)
   - [변수](01_introduction/03_Variables.md)
@@ -8,18 +9,18 @@
   - [클래스](01_introduction/05_Classes.md)
   - [제너릭](01_introduction/06_Generics.md)
   - [상속](01_introduction/07_Inheritance.md)
-# 제어문 Control Flow
+# 흐름제어
   - [When 조건문](02_control_flow/01_When.md)
   - [반복문 Loop](02_control_flow/02_Loops.md)
   - [범위 Ranges](02_control_flow/03_Ranges.md)
   - [같은지 비교 Equality Checks](02_control_flow/04_Equality%20Checks.md)
   - [조건문 Conditional expression](02_control_flow/05_Conditional%20expression.md)
-# 특별한 클래스들
+# 특별한 클래스
   - [데이터 클래스 Data Class](03_special_classes/01_Data%20classes.md)
   - [열거 클래스 Enum](03_special_classes/02_Enum.md)
   - [봉인 클래스 Sealed Classes](03_special_classes/03_Sealed%20Classes.md)
   - [오브젝트 Object](03_special_classes/04_Object.md)
-# 함수 Functional
+# 특별한 함수
   - [고차 함수 Higher-Order Functions](04_functional/01_Higher-Order%20Functions.md)
   - [람다 함수 Lambdas](04_functional/02_Lambdas.md)
   - [확장 함수와 확장 프로퍼티 Extensions](04_functional/03_extensionFunctions.md)
@@ -41,7 +42,7 @@
   - [맵 조회 Map\[\]](05_Collections/15_Map_getValue.md)
   - [지퍼 zip](05_Collections/16_zip.md)
   - [안전한 조회 getOrElse](05_Collections/17_getOrElse.md)
-# 범위 제한 함수 Scope Functions
+# 범위제한 함수 Scope Functions
   - [Let 블록](06_scope_functions/01_let.md)
   - [Run 블록](06_scope_functions/02_run.md)
   - [With 블록](06_scope_functions/03_with.md)
@@ -55,3 +56,5 @@
   - [문자열 템플릿 String Templates](08_productivity_boosters/02_String%20Templates.md)
   - [구조분해 Destructuring Declarations](08_productivity_boosters/03_Destructuring%20Declarations.md)
   - [스마트캐스트 Smart Casts](08_productivity_boosters/04_Smart%20Casts.md)
+# 마무리
+  - [끝으로](finale.md)

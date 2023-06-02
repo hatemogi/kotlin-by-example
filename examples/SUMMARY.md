@@ -1,7 +1,7 @@
 # Kotlin by Examples
 
 # 시작 Introduction
-  - [예제로 격파하는 Kotlin](README.md)
+  - [코틀린에 대해](README.md)
   - [헬로 월드](01_introduction/01_Hello%20world.md)
   - [함수](01_introduction/02_Functions.md)
   - [변수](01_introduction/03_Variables.md)

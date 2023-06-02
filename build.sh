@@ -1,7 +1,7 @@
 #!/bin/sh
 
-set -i 
+set -i
 
 mdbook build
-cd docs && rpl -Rx .html '.md"' '.html"' *
+cd book && rpl -Rx .html '.md"' '.html"' *
 

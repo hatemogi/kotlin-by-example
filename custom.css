@@ -21,3 +21,21 @@ h1.menu-title {
 pre code.hljs {
   border-radius: 5px;
 }
+
+pre>.buttons {
+  right: 24px;
+}
+
+div.code-area>div.CodeMirror {
+  font-size: 14px;
+  font-family: 'JetBrains Mono', 'Noto Serif KR';
+}
+
+div.output-wrapper {
+  min-height: 80px;
+}
+
+div.output-wrapper>div.code-output {
+  font-size: 14px;
+  font-family: 'JetBrains Mono', 'Noto Serif KR';
+}

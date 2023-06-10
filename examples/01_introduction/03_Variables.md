@@ -25,7 +25,6 @@ fun main() {
 //sampleEnd
 }
 ```
-{validate="false"}
 
 1. 초기화 없이 변수를 선언했습니다.
 2. 초기화하지 않은 변수를 읽으려하면 컴파일러가 `Variable 'e' must be initialized`라고 에러를 발생시킵니다.

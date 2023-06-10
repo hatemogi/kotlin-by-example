@@ -1,4 +1,4 @@
-# 널 안전성 Null Safety
+# Null 안전성
 
 `NullPointerException` 세상에서 벗어나기 위해, 기본적으로 코틀린의 변수에는 `null`을 지정할 수 없게 되어있습니다. 만약 변수가 null이 될 수도 있다면, 타입의 끝에 `?`표시를 붙여 두어야만 합니다.
 
@@ -26,7 +26,6 @@ fun main() {
 //sampleEnd
 }
 ```
-{validate="false"}
 
 1. null-불가 문자열 변수를 선언했습니다.
 2. null-불가 변수에 `null`을 대입하려고 하면, 컴파일 에러가 발생합니다.

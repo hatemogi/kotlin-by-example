@@ -26,7 +26,7 @@ pre>.buttons {
   right: 24px;
 }
 
-div.code-area>div.CodeMirror {
+div.code-area>.CodeMirror {
   font-size: 14px;
   font-family: 'JetBrains Mono', 'Noto Serif KR';
 }

@@ -1,6 +1,6 @@
 # 반복문 Loops
 
-코틀린에는 흔히 쓰이는 반복문 구문인, `for`, `while`, `do-while` 모두를 지원합니다.
+코틀린에는 흔히 쓰는 반복문 구문인, `for`, `while`, `do-while` 모두를 지원합니다.
 
 ### `for`
 
@@ -9,25 +9,25 @@
 ```kotlin
 fun main(args: Array<String>) {
 //sampleStart
-    val cakes = listOf("carrot", "cheese", "chocolate")
+    val cakes = listOf("당근", "치즈", "초콜릿")
 
     for (cake in cakes) {                               // 1
-        println("Yummy, it's a $cake cake!")
+        println("맛있는 ${cake}케이크!")
     }
 
 //sampleEnd
 }
 ```
 
-1. 리스트에 있는 모든 케잌에 대해 반복합니다.
+1. 리스트에 있는 모든 케이크에 대해 반복합니다.
 
 ### `while`과 `do-while`
 
 `while`과 `do-while`도 대부분의 언어와 비슷하게 동작합니다.
 
 ```kotlin
-fun eatACake() = println("Eat a Cake")
-fun bakeACake() = println("Bake a Cake")
+fun eatACake() = println("케이크 먹기")
+fun bakeACake() = println("케이크 굽기")
 
 fun main(args: Array<String>) {
     var cakesEaten = 0
@@ -65,10 +65,10 @@ class Zoo(val animals: List<Animal>) {
 
 fun main() {
 
-    val zoo = Zoo(listOf(Animal("zebra"), Animal("lion")))
+    val zoo = Zoo(listOf(Animal("얼룩말"), Animal("사자")))
 
     for (animal in zoo) {                                   // 3
-        println("Watch out, it's a ${animal.name}")
+        println("여기 ${animal.name} 있어요!")
     }
 
 }
@@ -80,4 +80,4 @@ fun main() {
   * `hasNext()`: `Boolean`
 3. 내가 만든 이터레이터를 써서 동물원에 있는 동물들에 대해 반복했습니다.
 
-이터레이터는 타입 안에 직접 선언하거나, 확장 함수의 형태로 타입 밖에서 따로 선언할 수도 있습니다.
+이터레이터는 타입 안에 직접 선언하거나, 확장(extension) 함수의 형태로 타입 밖에서 따로 선언할 수도 있습니다.

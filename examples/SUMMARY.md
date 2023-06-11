@@ -14,7 +14,7 @@
   - [반복문 Loop](02_control_flow/02_Loops.md)
   - [범위 Ranges](02_control_flow/03_Ranges.md)
   - [같은지 비교 Equality Checks](02_control_flow/04_Equality%20Checks.md)
-  - [조건문 Conditional expression](02_control_flow/05_Conditional%20expression.md)
+  - [If 조건식](02_control_flow/05_Conditional%20expression.md)
 # 특별한 클래스
   - [데이터 클래스 Data Class](03_special_classes/01_Data%20classes.md)
   - [열거 클래스 Enum](03_special_classes/02_Enum.md)

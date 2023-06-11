@@ -7,7 +7,7 @@
   - [변수](01_introduction/03_Variables.md)
   - [Null 안전성](01_introduction/04_Null%20Safety.md)
   - [클래스](01_introduction/05_Classes.md)
-  - [제너릭](01_introduction/06_Generics.md)
+  - [제네릭](01_introduction/06_Generics.md)
   - [상속](01_introduction/07_Inheritance.md)
 # 흐름제어
   - [When 조건문](02_control_flow/01_When.md)

@@ -8,8 +8,8 @@
 fun main() {
 //sampleStart
 
-  val authors = setOf("Shakespeare", "Hemingway", "Twain")
-  val writers = setOf("Twain", "Shakespeare", "Hemingway")
+  val authors = setOf("셰익스피어", "헤밍웨이", "트웨인")
+  val writers = setOf("트웨인", "셰익스피어", "헤밍웨이")
 
   println(authors == writers)   // 1
   println(authors === writers)  // 2
@@ -17,5 +17,5 @@ fun main() {
 }
 ```
 
-1. `authors.equals(writers)`를 호출하게 되고, 이는 요소의 순서를 무시하기 때문에, 결과적으로 `true`를 반환합니다.
+1. `authors.equals(writers)`를 호출하게 되고, 집합은 요소의 순서를 무시하기 때문에, 결과적으로 `true`를 반환합니다.
 2. `authors`와 `writers`는 다른 인스턴스(참조값)이기 때문에 `false`를 반환합니다.

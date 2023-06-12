@@ -1,7 +1,8 @@
 # 예제로 격파하는 코틀린
 
-# 시작
-  - [코틀린에 대해](README.md)
+# 예제로 격파하는 코틀린
+  - [코틀린 소개, 과정 안내](README.md)
+# 기본
   - [헬로 월드](01_introduction/01_Hello%20world.md)
   - [함수](01_introduction/02_Functions.md)
   - [변수](01_introduction/03_Variables.md)
@@ -24,7 +25,7 @@
   - [고차함수](04_functional/01_Higher-Order%20Functions.md)
   - [람다함수](04_functional/02_Lambdas.md)
   - [확장함수와 확장속성](04_functional/03_extensionFunctions.md)
-# 컬렉션 Collections
+# 컬렉션 다루기
   - [리스트 List](05_Collections/01_List.md)
   - [집합 Set](05_Collections/02_Set.md)
   - [맵 Map](05_Collections/03_Map.md)
@@ -42,16 +43,16 @@
   - [맵 조회 Map\[\]](05_Collections/15_Map_getValue.md)
   - [지퍼 zip](05_Collections/16_zip.md)
   - [안전한 조회 getOrElse](05_Collections/17_getOrElse.md)
-# 범위제한 함수 Scope Functions
-  - [Let 블록](06_scope_functions/01_let.md)
-  - [Run 블록](06_scope_functions/02_run.md)
-  - [With 블록](06_scope_functions/03_with.md)
-  - [Apply 블록](06_scope_functions/04_apply.md)
-  - [Also 블록](06_scope_functions/05_also.md)
-# 위임 Delegation
+# 블록 함수
+  - [let 블록](06_scope_functions/01_let.md)
+  - [run 블록](06_scope_functions/02_run.md)
+  - [with 블록](06_scope_functions/03_with.md)
+  - [apply 블록](06_scope_functions/04_apply.md)
+  - [also 블록](06_scope_functions/05_also.md)
+# 위임
   - [위임 패턴](07_Delegation/01_delegationPattern.md)
   - [위임 속성](07_Delegation/02_DelegatedProperties.md)
-# 생산성 부스터 Productivity Boosters
+# 생산성 부스터
   - [이름지정 파라미터](08_productivity_boosters/01_namedArguments.md)
   - [문자열 템플릿](08_productivity_boosters/02_String%20Templates.md)
   - [구조분해 Destructuring](08_productivity_boosters/03_Destructuring%20Declarations.md)

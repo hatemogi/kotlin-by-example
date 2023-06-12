@@ -1,6 +1,6 @@
-# 렛 코드블록 let
+# let 블록
 
-코틀린 표준 라이브러리에 있는 `let` 함수는 범위를 제한할 때나 null-검사를 할 때 씁니다. 오브젝트에 대해 `let`을 호출하면 주어진 코드블록을 실행하고난 최종 결괏값을 전체 식(expression)의 반환값으로 돌려받습니다. `let`으로 전달한 코드블록 안에서는 `it`(다른 이름으로도 지정가능)으로 해당 오브젝트를 참조할 수 있습니다.
+코틀린 표준 라이브러리에 있는 `let` 함수는 범위를 제한할 때나 null-검사를 할 때 씁니다. 오브젝트에 대해 `let`으로 감싼 코드블록을 실행하고난 최종 결괏값을 전체 식(expression)의 반환값으로 돌려받습니다. `let`으로 전달한 코드블록 안에서는 `it`(다른 이름으로도 지정가능)으로 해당 오브젝트를 참조할 수 있습니다.
 
 ```kotlin
 fun customPrint(s: String) {
@@ -13,11 +13,11 @@ fun main() {
         customPrint(it)                    // 2
         it.isEmpty()                       // 3
     }
-    println(" is empty: $empty")
+    println(" 비었나: $empty")
 
 
     fun printNonNull(str: String?) {
-        println("Printing \"$str\":")
+        println("\"$str\" 프린트:")
 
         str?.let {                         // 4
             print("\t")
@@ -36,8 +36,8 @@ fun main() {
     }
 
     printNonNull(null)
-    printNonNull("my string")
-    printIfBothNonNull("First","Second")
+    printNonNull("문자열")
+    printIfBothNonNull("첫번째", "두번째")
 //sampleEnd
 }
 
@@ -46,5 +46,5 @@ fun main() {
 1. "test" 문자열 값에 대해, 주어진 코드블록을 실행합니다.
 2. `it`으로 "_test_"에 접근합니다.
 3. `let`은 전체 표현식의 마지막 값을 반환합니다.
-4. 안전한 호출방식을 썼기 때문에, `let`과 그 코드블록은 null이 아닌 경우에만 실행됩니다.
-5. `it` 대신에 다른 이름으로 접근할 수도 있습니다. 이 방법으로 통해, 바깥 `let`구문에 있는 오브젝트에 접근했습니다.
+4. 안전한 호출방식을 썼기 때문에, `let`과 그 코드블록은 null이 아닌 경우에만 실행됩니다. null일 때는 실행되지 않습니다.
+5. `it` 대신에 다른 이름으로 접근할 수도 있습니다. 이 방법으로 통해, 바깥쪽 `let`구문에 참조되는 오브젝트에 접근했습니다.

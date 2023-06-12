@@ -1,6 +1,6 @@
-# 몇 개 있나 count
+# 몇 개 있나
 
-`count` 함수는 컬렉션에 몇 개의 요소가 들어있는지 반환합니다. 조건을 판단하는 함수를 전달하면 해당 조건에 맞는 요소가 몇 개 있는 지 확인해 줍니다.
+`count` 함수는 컬렉션에 몇 개의 아이템이 들어있는지 반환합니다. 참거짓을 판단하는 함수를 전달하면 해당하는 아이템이 몇 개 있는지 확인해줍니다.
 
 ```kotlin
 fun main() {
@@ -12,8 +12,8 @@ fun main() {
     val evenCount = numbers.count { it % 2 == 0 }        // 3
 //sampleEnd
 
-    println("Total number of elements: $totalCount")
-    println("Number of even elements: $evenCount")
+    println("전체 아이템 갯수: $totalCount")
+    println("짝수 갯수: $evenCount")
 }
 ```
 

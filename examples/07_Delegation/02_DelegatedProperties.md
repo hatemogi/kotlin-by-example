@@ -1,6 +1,6 @@
 # 위임속성
 
-코틀린에 있는 [위임속성](http://kotlinlang.org/docs/reference/delegated-properties.html) 기능은 인스턴스의 `set`과 `get` 속성에 접근하는 걸 위임할 수 있게 해줍니다. 위임할 객체에는 `getValue` 메서드가 꼭 있어야 합니다. 변경 가능한(mutable) 속성이라면 `setValue` 메서드도 작성해야 합니다.
+코틀린에 있는 [위임속성](http://kotlinlang.org/docs/reference/delegated-properties.html) 기능은 인스턴스의 `set`과 `get` 속성에 접근하는 걸 위임할 수 있게 해 줍니다. 위임할 객체에는 `getValue` 메서드가 꼭 있어야 합니다. 변경 가능한(mutable) 속성이라면 `setValue` 메서드도 작성해야 합니다.
 
 ```kotlin
 import kotlin.reflect.KProperty
@@ -33,7 +33,7 @@ fun main() {
 
 ## 표준 위임속성
 
-코틀린 표준 라이브러리에는 `lazy`, `observable` 같은 유용한 기본 위임속성들이 있습니다. 예를들어, `lazy` 속성은 지연 초기화에 사용합니다.
+코틀린 표준 라이브러리에는 `lazy`, `observable` 같은 유용한 기본 위임속성들이 있습니다. 예를 들어, `lazy` 속성은 지연 초기화에 사용합니다.
 
 ```kotlin
 class LazySample {
@@ -54,11 +54,11 @@ fun main() {
 }
 ```
 
-1. 오브젝트 생성시 `lazy` 속성은 아직 초기화되지 않은 상태입니다.
+1. 인스턴스 생성 시 `lazy` 속성은 아직 초기화되지 않은 상태입니다.
 2. 처음 `get()`이 호출되면 람다식을 실행한 결과가 반환되고, 이 값이 보관됩니다.
 3. 이후 `get()` 호출은 최초 보관된 값을 그대로 반환합니다.
 
-스레드 안전성을 고려한다면, `blockingLazy()`를 씁니다. 이는 해당 값이 딱 한 스레드에서만 계산되도록 보장하고, 나머지 스레드에서 이 값을 사용하게 해줍니다.
+스레드 안전성을 고려한다면, `blockingLazy()`를 씁니다. 이는 해당 값이 딱 한 스레드에서만 계산되도록 보장하고, 나머지 스레드에서 이 값을 사용하게 해 줍니다.
 
 ## 맵에 속성 저장하기
 

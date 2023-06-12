@@ -1,6 +1,6 @@
 # 문자열 템플릿
 
-[문자열 템플릿](https://kotlinlang.org/docs/reference/basic-types.html#string-templates)은 문자열 안에 변수를 담아서 표현할 수 있게 해줍니다. 실제 해당 문자열이 쓰이는 시점에 (예를들어, `println`에 전달된다거나 할 때) 문자열 안에 있는 식들이 모두 평가되어 해당 값으로 치환됩니다.
+[문자열 템플릿](https://kotlinlang.org/docs/reference/basic-types.html#string-templates)은 문자열 안에 변수를 담아서 표현할 수 있게 해 줍니다. 실제 해당 문자열이 쓰이는 시점에 (예를 들어, `println`에 전달된다거나 할 때) 문자열 안에 있는 식들이 모두 평가되어 해당 값으로 치환됩니다.
 
 ```kotlin
 fun main() {

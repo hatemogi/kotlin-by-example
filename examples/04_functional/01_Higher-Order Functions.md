@@ -2,7 +2,7 @@
 
 [고차 함수](https://kotlinlang.org/docs/reference/lambdas.html)는 다른 함수를 파라미터로 받거나, 반환값으로 함수를 돌려주는 함수를 말합니다.
 
-### 함수를 파라미터로 받기
+## 함수를 파라미터로 받기
 
 ```kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1

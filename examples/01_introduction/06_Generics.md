@@ -1,10 +1,10 @@
 # 제네릭 Generics
 
-[제네릭](https://kotlinlang.org/docs/reference/generics.html)은 현대의 프로그래밍 언어에 있어 표준처럼 자리잡은 일반화 기법입니다. 제네릭 클래스와 함수는 공통 코드에서 불특정 타입을 두고, 그 외에 독립적인 공통 코드를 잘 감싸서 쓸 수 있게 해서 코드 재사용성을 높여줍니다. `List<T>`에 있는 코드들이 타입 `T`에 관계 없이 잘 작동하는 것처럼요.
+[제네릭](https://kotlinlang.org/docs/reference/generics.html)은 현대의 프로그래밍 언어에 있어 표준처럼 자리 잡은 일반화 기법입니다. 제네릭 클래스와 함수는 공통 코드에서 불특정 타입을 두고, 그 외에 독립적인 공통 코드를 잘 감싸서 쓸 수 있게 해서 코드 재사용성을 높여줍니다. `List<T>`에 있는 코드들이 타입 `T`에 관계없이 잘 작동하는 것처럼요.
 
-## 제너릭 클래스 Generic Classes
+## 제너릭 클래스
 
-코틀린에서 제네릭을 쓰는 첫번째 방법은, 제네릭 클래스를 이용하는 것입니다.
+코틀린에서 제네릭을 쓰는 첫 번째 방법은, 제네릭 클래스를 이용하는 것입니다.
 
 ```kotlin
 //sampleStart
@@ -47,7 +47,7 @@ fun main() {
 3. `E`를 반환 타입 자리에 쓸 수도 있습니다.
 
 
-## 제네릭 함수 Generic Functions
+## 제네릭 함수
 
 어떤 함수가 특정 타입에 독립적이라면, [제네릭 함수](https://kotlinlang.org/docs/reference/generics.html#generic-functions)로 정의해도 됩니다. 예제로, 스택을 만드는 유틸리티 함수를 작성해 보겠습니다.
 

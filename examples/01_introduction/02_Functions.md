@@ -1,4 +1,4 @@
-# 함수 Functions
+# 함수
 
 ## 기본값 파라미터와 이름지정 파라미터
 
@@ -28,15 +28,15 @@ fun main() {
 ```
 
 1. 이 함수는 `String` 타입의 파라미터를 하나 받아서 `Unit`을 반환했습니다. `Unit`은 반환할 **값이 없다**는 의미입니다.
-2. 이 함수의 두번째 파라미터는, [기본값 파라미터](https://kotlinlang.org/docs/reference/functions.html#default-arguments)로 `Info`를 받습니다. 함수 반환 타입을 생략했는데, 이러면 `Unit`을 반환한다는 의미입니다.
+2. 이 함수의 두 번째 파라미터는, [기본값 파라미터](https://kotlinlang.org/docs/reference/functions.html#default-arguments)로 `Info`를 받습니다. 함수 반환 타입을 생략했는데, 이러면 `Unit`을 반환한다는 의미입니다.
 3. 이 함수는 정수 `Int`를 반환합니다.
-4. 이 한줄짜리 함수도 정수를 반환합니다. 반환 타입을 생략했지만, **타입추론**기능 덕분에 정수 타입을 반환한다고 인식합니다.
+4. 이 한 줄짜리 함수도 정수를 반환합니다. 반환 타입을 생략했지만, **타입추론**기능 덕분에 정수 타입을 반환한다고 인식합니다.
 5. `printMessage` 함수를 `Hello`라는 파라미터를 주고 호출했습니다.
 6. `printMessageWithPrefix` 함수를 두 파라미터 모두 전달해서 호출했습니다.
-7. 두번째 파라미터를 생략해서 호출하면, 기본값인 `Info`가 전달됩니다.
+7. 두 번째 파라미터를 생략해서 호출하면, 기본값인 `Info`가 전달됩니다.
 8. 같은 함수를 [이름지정 파라미터](https://kotlinlang.org/docs/reference/functions.html#named-arguments) 기능을 써서 호출했고, 심지어 파라미터 순서를 바꿨습니다.
 9. `sum` 함수 결괏값을 프린트 합니다.
-10. `multiply` 함수 결괏값을 프린트 합니다.
+10. `multiply` 함수 결괏값을 프린트합니다.
 
 ## 중위 함수 Infix Functions
 
@@ -71,7 +71,7 @@ class Person(val name: String) {
 3. 표준 라이브러리에 있는 중위 함수 `to`를 호출해서 `Pair`를 만들었습니다.
 4. 이렇게 `to`랑 같은 일을 하는 `onto`를 직접 구현할 수도 있습니다.
 5. 중위 표현법은 멤버 함수나 메서드에도 쓸 수 있습니다.
-6. 선언된 클래스 자체가 첫번째 파라미터가 됩니다.
+6. 선언된 클래스 자체가 첫 번째 파라미터가 됩니다.
 
 이 예제에서 [지역 함수](https://kotlinlang.org/docs/reference/functions.html#local-functions)(어떤 함수 안에 있는 함수)를 사용한 점도 살펴봐주세요.
 

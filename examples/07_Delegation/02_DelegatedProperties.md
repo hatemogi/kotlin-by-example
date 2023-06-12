@@ -1,6 +1,6 @@
-# 위임속성 Delegated Properties
+# 위임속성
 
-코틀린에 있는 [위임속성](http://kotlinlang.org/docs/reference/delegated-properties.html) 기능은 객체의 `set`과 `get` 속성에 접근하는 걸 위임할 수 있게 해줍니다. 위임할 객체에는 `getValue` 메서드가 꼭 있어야 합니다. 변경 가능한(mutable) 속성이라면 `setValue` 메서드도 작성해야 합니다.
+코틀린에 있는 [위임속성](http://kotlinlang.org/docs/reference/delegated-properties.html) 기능은 인스턴스의 `set`과 `get` 속성에 접근하는 걸 위임할 수 있게 해줍니다. 위임할 객체에는 `getValue` 메서드가 꼭 있어야 합니다. 변경 가능한(mutable) 속성이라면 `setValue` 메서드도 작성해야 합니다.
 
 ```kotlin
 import kotlin.reflect.KProperty
@@ -8,16 +8,16 @@ import kotlin.reflect.KProperty
 class Example {
     var p: String by Delegate()                                               // 1
 
-    override fun toString() = "Example Class"
+    override fun toString() = "예제 클래스"
 }
 
 class Delegate() {
     operator fun getValue(thisRef: Any?, prop: KProperty<*>): String {        // 2
-        return "$thisRef, thank you for delegating '${prop.name}' to me!"
+        return "$thisRef, '${prop.name}' 속성을 위임했습니다!"
     }
 
     operator fun setValue(thisRef: Any?, prop: KProperty<*>, value: String) { // 2
-        println("$value has been assigned to ${prop.name} in $thisRef")
+        println("$thisRef 인스턴스에 있는 ${prop.name} 속성으로 지정된 값은 ${value}입니다.")
     }
 }
 
@@ -31,9 +31,9 @@ fun main() {
 1. `Delegate` 인스턴스의 `String` 타입 속성을 프로퍼티 `p`로 위임했습니다. 위임할 객체는 `by` 키워드 뒤에 선언했습니다.
 2. 위임 메서드를 구현했습니다. 항상 이런 파라미터 타입을 씁니다. 구현 자체는 필요한 나름의 방식으로 구현하면 됩니다. 만약 불변(immutable) 속성이라면 `getValue` 메서드만 작성해도 됩니다.
 
-### 표준 위임속성 Standard Delegates
+## 표준 위임속성
 
-코틀린 표준 라이브러리에는 `lazy`, `observable` 같은 유용한 위임속성들이 있습니다. 예를들어, `lazy` 속성은 지연 초기화에 사용합니다.
+코틀린 표준 라이브러리에는 `lazy`, `observable` 같은 유용한 기본 위임속성들이 있습니다. 예를들어, `lazy` 속성은 지연 초기화에 사용합니다.
 
 ```kotlin
 class LazySample {
@@ -42,8 +42,8 @@ class LazySample {
     }
 
     val lazyStr: String by lazy {
-        println("computed!")          // 2
-        "my lazy"
+        println("계산!")          // 2
+        "지연 값"
     }
 }
 
@@ -54,15 +54,15 @@ fun main() {
 }
 ```
 
-1. 오브젝트 생성시에 `lazy` 속성은 아직 초기화되지 않은 상태입니다.
+1. 오브젝트 생성시 `lazy` 속성은 아직 초기화되지 않은 상태입니다.
 2. 처음 `get()`이 호출되면 람다식을 실행한 결과가 반환되고, 이 값이 보관됩니다.
-3. 이후 `get()` 호출은 보관된 값을 그대로 반환합니다.
+3. 이후 `get()` 호출은 최초 보관된 값을 그대로 반환합니다.
 
-스레드 안정성을 고려한다면, `blockingLazy()`를 씁니다. 이는 해당 값이 딱 한 스레드에서만 계산되도록 보장하고, 나머지 스레드에서 이 값을 사용하게 해줍니다.
+스레드 안전성을 고려한다면, `blockingLazy()`를 씁니다. 이는 해당 값이 딱 한 스레드에서만 계산되도록 보장하고, 나머지 스레드에서 이 값을 사용하게 해줍니다.
 
-### 맵에 속성 저장하기 Storing Properties in a Map
+## 맵에 속성 저장하기
 
-위임 속성을 써서, 맵에 속성들을 저장할 수도 있습니다. JSON 파싱 작업 같이 동적(dynamic) 작업을 할 때 유용하게 쓸 수 있습니다.
+위임 속성을 써서, 맵에 속성들을 저장할 수도 있습니다. JSON 파싱 작업 같이 동적(dynamic) 작업을 할 때 유용하게 씁니다.
 
 ```kotlin
 class User(val map: Map<String, Any?>) {
@@ -82,4 +82,4 @@ fun main() {
 
 1. `map`에 문자열 키를 위임해서, 속성 이름으로 쓰게 했습니다.
 
-변이(mutable) 속성도 맵에 위임할 수 있습니다. 그런 위임속성에 값을 지정할 때, 맵의 값도 바뀌게 됩니다. 그러려면 읽기전용인 `Map` 대신에 `MutableMap`을 써야 합니다.
+변경가능(mutable) 속성도 맵에 위임할 수 있습니다. 그런 위임속성에 값을 지정할 때, 맵의 값도 바뀌게 됩니다. 그러려면 읽기전용인 `Map` 타입 대신에 `MutableMap`을 써야 합니다.

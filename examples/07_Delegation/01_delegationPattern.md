@@ -1,4 +1,4 @@
-# 위임 패턴 Delegation Pattern
+# 위임 패턴
 
 코틀린에는 [위임 패턴](https://kotlinlang.org/docs/reference/delegation.html)을 구현하기 간편한 방법이 있습니다.
 

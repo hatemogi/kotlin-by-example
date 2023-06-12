@@ -34,7 +34,7 @@
   - [처음과 끝](05_Collections/07_firstlast.md)
   - [몇 개 있나](05_Collections/08_count.md)
   - [변환](05_Collections/09_map.md)
-  - [컬렉션을 맵으로 만들기](05_Collections/10_associateBy.md)
+  - [맵으로 만들기](05_Collections/10_associateBy.md)
   - [분할](05_Collections/11_partition.md)
   - [변환해 펼치기, 플랫맵](05_Collections/12_flatMap.md)
   - [최소값, 최대값](05_Collections/13_max.md)

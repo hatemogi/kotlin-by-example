@@ -1,8 +1,6 @@
-# 정렬 sorted
+# 정렬
 
-컬렉션의 `sorted` 메서드는 전체 요소를 오름차순으로 정렬한 리스트를 반환합니다.
-
-`sortedBy` 메서드는 각 요소들에 대해 어떤 기준으로 정렬할 지 정하는 함수를 받아서 오름차순으로 정렬한 리스트를 반환합니다.
+컬렉션의 `sorted` 메서드는 전체 아이템을 오름차순으로 정렬합니다. `sortedBy` 메서드는 각 요소들에 대해 어떤 기준으로 정렬할지 정하는 함수를 파라미터로 받아서 오름차순으로 정렬한 리스트를 반환합니다.
 
 ```kotlin
 import kotlin.math.abs
@@ -17,11 +15,11 @@ fun main() {
     val descendingBy = shuffled.sortedByDescending { abs(it)  } // 5
 //sampleEnd
 
-    println("Shuffled: $shuffled")
-    println("Natural order: $natural")
-    println("Inverted natural order: $inverted")
-    println("Inverted natural order value: $descending")
-    println("Inverted natural order of absolute values: $descendingBy")
+    println("무작위순: $shuffled")
+    println("오름차순: $natural")
+    println("오른차순 역순: $inverted")
+    println("내림차순: $descending")
+    println("절댓값의 내림차순: $descendingBy")
 }
 ```
 

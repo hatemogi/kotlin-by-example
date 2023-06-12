@@ -25,10 +25,10 @@ fun main(args: Array<String>) {
 
 //sampleEnd
 
-    println("value1 is $value1")
-    println("value2 is $value2")
-    println("value3 is $value3")
-    println("value4 is $value4")
+    println("value1 = $value1")
+    println("value2 = $value2")
+    println("value3 = $value3")
+    println("value4 = $value4")
 }
 ```
 

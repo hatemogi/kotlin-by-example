@@ -59,3 +59,4 @@
   - [스마트캐스트](08_productivity_boosters/04_Smart%20Casts.md)
 # 마무리
   - [끝으로](finale.md)
+  - [감사 표시](CREDIT.md)

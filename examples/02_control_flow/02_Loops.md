@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
 
     while (cakesEaten < 5) {                    // 1
         eatACake()
-        cakesEaten ++
+        cakesEaten++
     }
 
     do {                                        // 2

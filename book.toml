@@ -3,7 +3,7 @@ authors = ["Daehyun Kim"]
 language = "ko"
 multilingual = false
 src = "examples"
-title = "예제로 격파하는 Kotlin"
+title = "예제로 공략하는 Kotlin 76제"
 description = "JetBrains의 Kotlin By Example 편역"
 
 [output.html]

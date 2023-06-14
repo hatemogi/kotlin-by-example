@@ -38,7 +38,7 @@
   - [맵으로 만들기](05_Collections/10_associateBy.md)
   - [둘로 가르기](05_Collections/11_partition.md)
   - [변환해 펼치기, 플랫맵](05_Collections/12_flatMap.md)
-  - [최소값, 최대값](05_Collections/13_max.md)
+  - [최솟값, 최댓값](05_Collections/13_max.md)
   - [정렬](05_Collections/14_sorted.md)
   - [맵 조회 Map\[\]](05_Collections/15_Map_getValue.md)
   - [지퍼 zip](05_Collections/16_zip.md)

@@ -21,7 +21,7 @@ fun main() {
     val aNewIssueStat = getStatusLog(addIssue(aNewIssue))
     val anIssueAlreadyInStat = getStatusLog(addIssue(anIssueAlreadyIn))
     println("이슈 $aNewIssue $aNewIssueStat")                     // 4
-    println("이슈 $anIssueAlreadyIn $anIssueAlreadyInStat")     git  // 5
+    println("이슈 $anIssueAlreadyIn $anIssueAlreadyInStat")       // 5
 }
 ```
 
